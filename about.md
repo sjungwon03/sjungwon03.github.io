@@ -9,10 +9,6 @@ description: Jungwon Sohn — Cloud Infrastructure & Backend Engineer. Building 
 
 Cloud infrastructure and backend engineer, and an OSS enthusiast — most of what I build now is open source: MCP servers, AI agents, developer tools and cloud-native services.
 
-That direction came out of two years and three months owning the backend of a government-funded vocational training LMS. Course progress there was the basis for tuition reimbursement, so the habit I took from it is simple: check that the numbers are right before checking that the feature works.
-
-I handled deployment and operations alongside development, and moved into infrastructure from there. Watching learners lose their progress on every deploy is why I treat zero-downtime deployment as a data-integrity requirement rather than a feature.
-
 ## Open source
 
 I build under [**Theorvane**](https://theorvane.tech) — open-source developer tools for explicit contracts and inspectable systems. Small public surfaces, typed contracts, transparent capability boundaries.
