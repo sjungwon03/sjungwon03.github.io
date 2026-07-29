@@ -25,6 +25,39 @@
       t.parentNode.insertBefore(wrap, t);
       wrap.appendChild(t);
     });
+
+    // 테마 전환. 고른 값이 운영체제 설정과 같아지면 저장한 값을 지워서
+    // 그다음부터는 다시 운영체제를 따라가게 둡니다.
+    (function () {
+      var btn = document.querySelector('.theme-toggle');
+      if (!btn) return;
+
+      var root = document.documentElement;
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+
+      function system() { return mq.matches ? 'dark' : 'light'; }
+      function current() { return root.dataset.theme || system(); }
+
+      function label() {
+        btn.setAttribute('aria-label', btn.dataset[current() === 'dark' ? 'toLight' : 'toDark']);
+        btn.title = btn.getAttribute('aria-label');
+      }
+
+      btn.addEventListener('click', function () {
+        var next = current() === 'dark' ? 'light' : 'dark';
+        try {
+          if (next === system()) { delete root.dataset.theme; localStorage.removeItem('theme'); }
+          else { root.dataset.theme = next; localStorage.setItem('theme', next); }
+        } catch (e) {
+          root.dataset.theme = next;
+        }
+        label();
+      });
+
+      // 저장한 값이 없을 때 운영체제 설정이 바뀌면 버튼 설명도 함께 맞춥니다.
+      if (mq.addEventListener) mq.addEventListener('change', label);
+      label();
+    })();
   </script>
 </body>
 </html>

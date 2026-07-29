@@ -1,6 +1,9 @@
 /* ─────────────────────────────────────────────
    손정원 — 개인 사이트
    단색 · 여백 중심. 라이트/다크 모두 지원합니다.
+
+   기본값은 운영체제 설정을 따르고,
+   헤더의 버튼으로 고른 값이 있으면 <html data-theme>가 그걸 덮어씁니다.
    ───────────────────────────────────────────── */
 
 :root {
@@ -19,10 +22,15 @@
 
   --w: 46rem;
   --w-wide: 60rem;
+
+  color-scheme: light;
 }
 
+/* 아래 두 블록은 같은 값입니다. 순수 CSS라 한쪽으로 합칠 수 없어
+   운영체제 설정(위)과 직접 고른 값(아래)에 각각 둡니다. 함께 고쳐 주세요. */
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --ink: #e8eaed;
     --ink-2: #c3c7ce;
     --mute: #9aa1ac;
@@ -31,7 +39,22 @@
     --fill: #1b1e24;
     --paper: #131519;
     --accent: #e8eaed;
+
+    color-scheme: dark;
   }
+}
+
+:root[data-theme="dark"] {
+  --ink: #e8eaed;
+  --ink-2: #c3c7ce;
+  --mute: #9aa1ac;
+  --faint: #6b7280;
+  --rule: #2a2e36;
+  --fill: #1b1e24;
+  --paper: #131519;
+  --accent: #e8eaed;
+
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -135,26 +158,65 @@ button:focus-visible {
   margin-bottom: 1.1rem;
 }
 
-/* ── 언어 전환 ────────────────────────────── */
+/* ── 언어 · 테마 전환 ─────────────────────── */
 
 .header-right { display: flex; align-items: center; gap: 1.15rem; }
+.header-tools { display: flex; align-items: center; gap: 0.45rem; }
 
-.lang-toggle {
+.lang-toggle,
+.theme-toggle {
   flex: none;
-  padding: 0.2rem 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.8rem;
   border: 1px solid var(--rule);
   border-radius: 5px;
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
   color: var(--mute);
+  background: none;
   transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
-.lang-toggle:hover {
+.lang-toggle:hover,
+.theme-toggle:hover {
   color: var(--ink);
   border-color: var(--faint);
   background: var(--fill);
 }
+
+.lang-toggle {
+  padding: 0 0.55rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.theme-toggle {
+  width: 1.8rem;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+.theme-toggle svg {
+  display: block;
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* 지금 화면이 밝으면 달을, 어두우면 해를 보여줍니다 — 누르면 바뀔 모습입니다. */
+.theme-toggle .i-sun { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .i-sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .i-moon { display: none; }
+}
+
+:root[data-theme="dark"] .theme-toggle .i-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .i-moon { display: none; }
 
 /* ── 본문 ─────────────────────────────────── */
 
@@ -407,7 +469,8 @@ button:focus-visible {
 /* ── 인쇄 ─────────────────────────────────── */
 
 @media print {
-  .site-nav, .site-footer, .resume-actions, .post-nav, .skip-link { display: none; }
+  .site-nav, .site-footer, .resume-actions, .post-nav, .skip-link,
+  .lang-toggle, .theme-toggle { display: none; }
   .site-main { border-top: 0; }
   body { font-size: 10.5pt; }
   .prose h2 { page-break-after: avoid; }
