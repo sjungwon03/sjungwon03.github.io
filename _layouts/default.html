@@ -18,16 +18,9 @@
   {%- include footer.html -%}
 
   <script>
-    // 넓은 표는 좁은 화면에서 페이지 대신 표 자체가 가로 스크롤되게 감쌉니다.
-    document.querySelectorAll('.prose > table').forEach(function (t) {
-      var wrap = document.createElement('div');
-      wrap.className = 'table-wrap';
-      t.parentNode.insertBefore(wrap, t);
-      wrap.appendChild(t);
-    });
-
     // 테마 전환. 고른 값이 운영체제 설정과 같아지면 저장한 값을 지워서
     // 그다음부터는 다시 운영체제를 따라가게 둡니다.
+    // 다른 스크립트가 실패해도 이건 살아 있도록 블록을 따로 둡니다.
     (function () {
       var btn = document.querySelector('.theme-toggle');
       if (!btn) return;
@@ -45,12 +38,18 @@
 
       btn.addEventListener('click', function () {
         var next = current() === 'dark' ? 'light' : 'dark';
+        // 고른 값이 운영체제 설정과 같으면 저장하지 않고 다시 따라가게 둡니다.
+        var follow = next === system();
+
+        if (follow) root.removeAttribute('data-theme');
+        else root.setAttribute('data-theme', next);
+
+        // 저장이 막혀 있어도(사파리 비공개 브라우징 등) 화면은 이미 바뀐 뒤입니다.
         try {
-          if (next === system()) { delete root.dataset.theme; localStorage.removeItem('theme'); }
-          else { root.dataset.theme = next; localStorage.setItem('theme', next); }
-        } catch (e) {
-          root.dataset.theme = next;
-        }
+          if (follow) localStorage.removeItem('theme');
+          else localStorage.setItem('theme', next);
+        } catch (e) {}
+
         label();
       });
 
@@ -58,6 +57,16 @@
       if (mq.addEventListener) mq.addEventListener('change', label);
       label();
     })();
+  </script>
+
+  <script>
+    // 넓은 표는 좁은 화면에서 페이지 대신 표 자체가 가로 스크롤되게 감쌉니다.
+    document.querySelectorAll('.prose > table').forEach(function (t) {
+      var wrap = document.createElement('div');
+      wrap.className = 'table-wrap';
+      t.parentNode.insertBefore(wrap, t);
+      wrap.appendChild(t);
+    });
   </script>
 </body>
 </html>
