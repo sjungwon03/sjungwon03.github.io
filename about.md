@@ -3,15 +3,15 @@ layout: page
 title: About
 lang: en
 alt_url: /ko/about/
-lede: Cloud Infrastructure & Backend Engineer.
+lede: Cloud Infrastructure & Backend Engineer. OSS enthusiast building MCP servers, AI agents, developer tools and cloud-native services.
 description: Jungwon Sohn — Cloud Infrastructure & Backend Engineer. Building TypeMCP, TypeChain and OpenVideo under Theorvane.
 ---
 
-I spent two years and three months owning the backend of a government-funded vocational training LMS. Course progress was the basis for tuition reimbursement, so the habit I took from it is simple: check that the numbers are right before checking that the feature works.
+Cloud infrastructure and backend engineer, and an OSS enthusiast — most of what I build now is open source: MCP servers, AI agents, developer tools and cloud-native services.
+
+That direction came out of two years and three months owning the backend of a government-funded vocational training LMS. Course progress there was the basis for tuition reimbursement, so the habit I took from it is simple: check that the numbers are right before checking that the feature works.
 
 I handled deployment and operations alongside development, and moved into infrastructure from there. Watching learners lose their progress on every deploy is why I treat zero-downtime deployment as a data-integrity requirement rather than a feature.
-
-These days most of my work is open source: developer tooling for MCP and LangChain, an AI-driven video editor, and cloud-native services.
 
 ## Open source
 
