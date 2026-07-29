@@ -14,18 +14,22 @@ Cloud infrastructure and backend engineer, and an OSS enthusiast — most of wha
 
 I build under [**Theorvane**](https://theorvane.tech) — open-source developer tools for explicit contracts and inspectable systems. Small public surfaces, typed contracts, transparent capability boundaries.
 
-- [**TypeMCP**](https://github.com/Theorvane/type-mcp) — decorator-first TypeScript declarations and runtime tooling for Model Context Protocol servers. Definition validation, MCP SDK compilation, stdio and Streamable HTTP transports, and a tools-only LangChain adapter. Published on npm as [`@theorvane/type-mcp`](https://www.npmjs.com/package/@theorvane/type-mcp).
-- [**TypeChain**](https://github.com/Theorvane/type-chain) — a decorator-first, type-safe authoring layer for LangChain JS tools and agents. `@Tool()` / `@Agent()` / `@Policy()` decorators, LangChain Core adapters, and an in-process TypeMCP bridge. On npm as [`@theorvane/type-chain`](https://www.npmjs.com/package/@theorvane/type-chain), published through GitHub Actions Trusted Publishing.
-- [**OpenVideo**](https://github.com/Theorvane/openvideo) — a local-first desktop video editor with an AI agent that operates the timeline: reading a project, cutting clips, generating voice and video, exporting through local FFmpeg. Media stays on the machine and model providers are opt-in — a local Ollama engine needs no account.
-- [**type-mcp-api-agent-skill**](https://github.com/Theorvane/type-mcp-api-agent-skill) — an orchestration skill and deterministic CLI workspace that turns API specifications into TypeMCP repositories.
-- [**examples**](https://github.com/Theorvane/examples) — runnable TypeChain and TypeMCP examples with explicit runtime boundaries.
+| Project | What it is |
+| --- | --- |
+| [**TypeMCP**](https://github.com/Theorvane/type-mcp)<br>[`@theorvane/type-mcp`](https://www.npmjs.com/package/@theorvane/type-mcp) | Decorator-first TypeScript declarations and runtime tooling for Model Context Protocol servers. Definition validation, MCP SDK compilation, stdio and Streamable HTTP transports, and a tools-only LangChain adapter. |
+| [**TypeChain**](https://github.com/Theorvane/type-chain)<br>[`@theorvane/type-chain`](https://www.npmjs.com/package/@theorvane/type-chain) | A decorator-first, type-safe authoring layer for LangChain JS tools and agents. `@Tool()` / `@Agent()` / `@Policy()` decorators, LangChain Core adapters, and an in-process TypeMCP bridge. Published through GitHub Actions Trusted Publishing. |
+| [**OpenVideo**](https://github.com/Theorvane/openvideo) | A local-first desktop video editor with an AI agent that operates the timeline: reading a project, cutting clips, generating voice and video, exporting through local FFmpeg. Media stays on the machine and model providers are opt-in — a local Ollama engine needs no account. |
+| [**type-mcp-api-agent-skill**](https://github.com/Theorvane/type-mcp-api-agent-skill) | An orchestration skill and deterministic CLI workspace that turns API specifications into TypeMCP repositories. |
+| [**examples**](https://github.com/Theorvane/examples) | Runnable TypeChain and TypeMCP examples with explicit runtime boundaries. |
 
 ## Projects
 
-- [**Youth Policy MCP**](https://github.com/sjungwon03/data-go-youth-policy-mcp) — Korea's public youth-policy API exposed as MCP tools, so an assistant can search and filter policies without a bespoke integration.
-- [**Youth Policy Chatbot**](https://github.com/sjungwon03/data-go-youth-policy-chatbot) — an MCP-based policy assistant built on top of that server.
-- [**YouthPick**](https://github.com/YouthPick) — a personalised youth-policy platform on Spring Boot 3.5, Java 21 and React 19. Team lead of five; owned the auth, admin, chat, file and profile domains end to end.
-- [**KOSA final project**](https://github.com/sjungwon03/kosa-final-project) — hybrid Proxmox and AWS infrastructure automation: four physical servers, 25 VMs and a Kubernetes HA cluster provisioned with Terraform and Ansible. Infrastructure lead of five.
+| Project | What it is |
+| --- | --- |
+| [**Youth Policy MCP**](https://github.com/sjungwon03/data-go-youth-policy-mcp) | Korea's public youth-policy API exposed as MCP tools, so an assistant can search and filter policies without a bespoke integration. |
+| [**Youth Policy Chatbot**](https://github.com/sjungwon03/data-go-youth-policy-chatbot) | An MCP-based policy assistant built on top of that server. |
+| [**YouthPick**](https://github.com/YouthPick) | A personalised youth-policy platform on Spring Boot 3.5, Java 21 and React 19. Team lead of five; owned the auth, admin, chat, file and profile domains end to end. |
+| [**KOSA final project**](https://github.com/sjungwon03/kosa-final-project) | Hybrid Proxmox and AWS infrastructure automation: four physical servers, 25 VMs and a Kubernetes HA cluster provisioned with Terraform and Ansible. Infrastructure lead of five. |
 
 ## Certifications
 
