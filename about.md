@@ -4,22 +4,26 @@ title: About
 lang: en
 alt_url: /ko/about/
 lede: Cloud Infrastructure & Backend Engineer.
-description: Jungwon Sohn — Cloud Infrastructure & Backend Engineer. Building MCP servers, AI agents, developer tools and cloud-native services.
+description: Jungwon Sohn — Cloud Infrastructure & Backend Engineer. Building TypeMCP, TypeChain and OpenVideo under Theorvane.
 ---
 
 I spent two years and three months owning the backend of a government-funded vocational training LMS. Course progress was the basis for tuition reimbursement, so the habit I took from it is simple: check that the numbers are right before checking that the feature works.
 
 I handled deployment and operations alongside development, and moved into infrastructure from there. Watching learners lose their progress on every deploy is why I treat zero-downtime deployment as a data-integrity requirement rather than a feature.
 
-These days I build in the open — MCP servers, AI agents, developer tools and cloud-native services.
+These days most of my work is open source: developer tooling for MCP and LangChain, an AI-driven video editor, and cloud-native services.
 
 ## Open source
 
-- [Theorvane](https://github.com/Theorvane) — developer tools for typed contracts and AI-native systems
-- [Youth Policy MCP](https://github.com/sjungwon03/data-go-youth-policy-mcp) — Korea's public youth-policy API exposed as MCP tools
-- [Youth Policy Chatbot](https://github.com/sjungwon03/data-go-youth-policy-chatbot) — an MCP-based policy assistant
-- [YouthPick](https://github.com/YouthPick) — personalised youth-policy platform
-- [KOSA Final Project](https://github.com/sjungwon03/kosa-final-project) — hybrid Proxmox and AWS infrastructure automation
+I build under [**Theorvane**](https://theorvane.tech) — open-source developer tools for explicit contracts and inspectable systems. Small public surfaces, typed contracts, transparent capability boundaries.
+
+- [**TypeMCP**](https://github.com/Theorvane/type-mcp) — decorator-first TypeScript declarations and runtime tooling for Model Context Protocol servers. Definition validation, MCP SDK compilation, stdio and Streamable HTTP transports, and a tools-only LangChain adapter. Published on npm as [`@theorvane/type-mcp`](https://www.npmjs.com/package/@theorvane/type-mcp).
+- [**TypeChain**](https://github.com/Theorvane/type-chain) — a decorator-first, type-safe authoring layer for LangChain JS tools and agents. `@Tool()` / `@Agent()` / `@Policy()` decorators, LangChain Core adapters, and an in-process TypeMCP bridge. On npm as [`@theorvane/type-chain`](https://www.npmjs.com/package/@theorvane/type-chain), published through GitHub Actions Trusted Publishing.
+- [**OpenVideo**](https://github.com/Theorvane/openvideo) — a local-first desktop video editor with an AI agent that operates the timeline: reading a project, cutting clips, generating voice and video, exporting through local FFmpeg. Media stays on the machine and model providers are opt-in — a local Ollama engine needs no account.
+- [**type-mcp-api-agent-skill**](https://github.com/Theorvane/type-mcp-api-agent-skill) — an orchestration skill and deterministic CLI workspace that turns API specifications into TypeMCP repositories.
+- [**examples**](https://github.com/Theorvane/examples) — runnable TypeChain and TypeMCP examples with explicit runtime boundaries.
+
+Outside the org: [Youth Policy MCP](https://github.com/sjungwon03/data-go-youth-policy-mcp), which exposes Korea's public youth-policy API as MCP tools, and [a chatbot](https://github.com/sjungwon03/data-go-youth-policy-chatbot) built on top of it.
 
 ## Certifications
 
