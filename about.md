@@ -20,7 +20,12 @@ I build under [**Theorvane**](https://theorvane.tech) — open-source developer 
 - [**type-mcp-api-agent-skill**](https://github.com/Theorvane/type-mcp-api-agent-skill) — an orchestration skill and deterministic CLI workspace that turns API specifications into TypeMCP repositories.
 - [**examples**](https://github.com/Theorvane/examples) — runnable TypeChain and TypeMCP examples with explicit runtime boundaries.
 
-Outside the org: [Youth Policy MCP](https://github.com/sjungwon03/data-go-youth-policy-mcp), which exposes Korea's public youth-policy API as MCP tools, and [a chatbot](https://github.com/sjungwon03/data-go-youth-policy-chatbot) built on top of it.
+## Projects
+
+- [**Youth Policy MCP**](https://github.com/sjungwon03/data-go-youth-policy-mcp) — Korea's public youth-policy API exposed as MCP tools, so an assistant can search and filter policies without a bespoke integration.
+- [**Youth Policy Chatbot**](https://github.com/sjungwon03/data-go-youth-policy-chatbot) — an MCP-based policy assistant built on top of that server.
+- [**YouthPick**](https://github.com/YouthPick) — a personalised youth-policy platform on Spring Boot 3.5, Java 21 and React 19. Team lead of five; owned the auth, admin, chat, file and profile domains end to end.
+- [**KOSA final project**](https://github.com/sjungwon03/kosa-final-project) — hybrid Proxmox and AWS infrastructure automation: four physical servers, 25 VMs and a Kubernetes HA cluster provisioned with Terraform and Ansible. Infrastructure lead of five.
 
 ## Certifications
 

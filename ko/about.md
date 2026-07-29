@@ -21,7 +21,12 @@ description: 손정원 — 클라우드 인프라 · 백엔드 엔지니어. The
 - [**type-mcp-api-agent-skill**](https://github.com/Theorvane/type-mcp-api-agent-skill) — API 문서를 넣으면 TypeMCP 저장소를 만들어 주는 도구입니다.
 - [**examples**](https://github.com/Theorvane/examples) — TypeChain과 TypeMCP를 실제로 돌려 보는 예제 모음입니다.
 
-이 외에 청년정책 공공 API를 MCP로 감싼 [청년정책 MCP](https://github.com/sjungwon03/data-go-youth-policy-mcp)와, 그걸 물려서 만든 [챗봇](https://github.com/sjungwon03/data-go-youth-policy-chatbot)이 있습니다.
+## 프로젝트
+
+- [**청년정책 MCP**](https://github.com/sjungwon03/data-go-youth-policy-mcp) — 온통청년 공공 API를 MCP 도구로 감쌌습니다. 별도 연동 없이 정책을 검색하고 걸러낼 수 있습니다.
+- [**청년정책 챗봇**](https://github.com/sjungwon03/data-go-youth-policy-chatbot) — 위 MCP 서버를 물려서 만든 정책 상담 챗봇입니다.
+- [**YouthPick**](https://github.com/YouthPick) — 청년정책 추천 플랫폼입니다. Spring Boot 3.5 · Java 21 · React 19으로 만들었고, 5인 팀의 팀장으로 인증 · 관리자 · 채팅 · 파일 · 프로필 도메인을 맡았습니다.
+- [**KOSA 최종 프로젝트**](https://github.com/sjungwon03/kosa-final-project) — Proxmox 온프레미스와 AWS를 묶은 하이브리드 인프라입니다. 물리 서버 4대 위에 VM 25대와 Kubernetes HA 클러스터를 Terraform · Ansible로 올렸고, 5인 팀의 인프라 총괄을 맡았습니다.
 
 ## 자격증
 
