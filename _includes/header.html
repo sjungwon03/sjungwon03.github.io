@@ -1,0 +1,17 @@
+<header class="site-header">
+  <a class="brand" href="{{ '/' | relative_url }}">
+    <span class="brand-mark" aria-hidden="true">◼</span>
+    <span class="brand-text">
+      <strong>{{ site.title }}</strong>
+      <em>{{ site.tagline }}</em>
+    </span>
+  </a>
+
+  <nav class="site-nav" aria-label="주요 메뉴">
+    {%- assign p = page.url -%}
+    <a href="{{ '/' | relative_url }}"{% if p == '/' %} aria-current="page"{% endif %}>글</a>
+    <a href="{{ '/resume/' | relative_url }}"{% if p contains '/resume' %} aria-current="page"{% endif %}>이력</a>
+    <a href="{{ '/about/' | relative_url }}"{% if p contains '/about' %} aria-current="page"{% endif %}>소개</a>
+    <a href="https://github.com/{{ site.github_username }}" rel="me noopener">GitHub</a>
+  </nav>
+</header>

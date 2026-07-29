@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  {%- include head.html -%}
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  {%- include header.html -%}
+
+  <main id="main" class="site-main">
+    {{ content }}
+  </main>
+
+  {%- include footer.html -%}
+
+  <script>
+    // 넓은 표는 좁은 화면에서 페이지 대신 표 자체가 가로 스크롤되게 감쌉니다.
+    document.querySelectorAll('.prose > table').forEach(function (t) {
+      var wrap = document.createElement('div');
+      wrap.className = 'table-wrap';
+      t.parentNode.insertBefore(wrap, t);
+      wrap.appendChild(t);
+    });
+  </script>
+</body>
+</html>

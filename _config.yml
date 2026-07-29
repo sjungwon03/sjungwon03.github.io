@@ -1,0 +1,38 @@
+title: 손정원
+tagline: 백엔드 · 클라우드 인프라
+description: 백엔드와 클라우드 인프라를 다룹니다. 만든 것과 그때 고민한 것을 적습니다.
+author: 손정원
+email: sjungwon03@gmail.com
+github_username: sjungwon03
+
+url: https://sjungwon03.github.io
+baseurl: ""
+
+permalink: /posts/:year/:month/:day/:title/
+timezone: Asia/Seoul
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+# 기본 테마를 쓰지 않고 레이아웃을 직접 둡니다
+theme: null
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
