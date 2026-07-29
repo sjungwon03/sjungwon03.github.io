@@ -2,23 +2,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 
-{%- assign page_title = page.title | default: site.title -%}
-{%- assign page_desc = page.description | default: site.description -%}
-<title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} · {{ site.tagline }}{% endif %}</title>
+{%- assign ko = false -%}
+{%- if page.lang == 'ko' %}{% assign ko = true %}{% endif -%}
+{%- if ko %}{% assign site_title = site.title_ko %}{% assign site_desc = site.description_ko %}
+{%- else %}{% assign site_title = site.title %}{% assign site_desc = site.description %}{% endif -%}
+{%- assign page_desc = page.description | default: site_desc -%}
+
+<title>{% if page.title %}{{ page.title }} · {{ site_title }}{% else %}{{ site_title }} · {% if ko %}{{ site.tagline_ko }}{% else %}{{ site.tagline }}{% endif %}{% endif %}</title>
 <meta name="description" content="{{ page_desc }}">
 <meta name="author" content="{{ site.author }}">
 
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-<meta property="og:title" content="{{ page_title }}">
+<meta property="og:title" content="{{ page.title | default: site_title }}">
 <meta property="og:description" content="{{ page_desc }}">
-<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:site_name" content="{{ site_title }}">
+<meta property="og:locale" content="{% if ko %}ko_KR{% else %}en_US{% endif %}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="{{ page.url | absolute_url }}">
-<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+{%- if page.alt_url %}
+<link rel="alternate" hreflang="{% if ko %}en{% else %}ko{% endif %}" href="{{ page.alt_url | absolute_url }}">
+<link rel="alternate" hreflang="{% if ko %}ko{% else %}en{% endif %}" href="{{ page.url | absolute_url }}">
+{%- endif %}
+<link rel="alternate" type="application/atom+xml" title="{{ site_title }}" href="{{ '/feed.xml' | relative_url }}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◼</text></svg>">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+<script
+  src="https://rybbit.handgarden.kr/api/script.js"
+  data-site-id="f78d81b90e86"
+  defer
+></script>

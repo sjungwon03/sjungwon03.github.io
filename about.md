@@ -1,30 +1,32 @@
 ---
 layout: page
-title: 소개
-lede: 백엔드와 클라우드 인프라를 다룹니다.
-description: 손정원 — 백엔드 · 클라우드 인프라 개발자. 경력 2년 3개월.
+title: About
+lang: en
+alt_url: /ko/about/
+lede: I work on backend systems and cloud infrastructure.
+description: Jungwon Son — backend and cloud infrastructure engineer. 2 years 3 months of experience.
 ---
 
-정부지원 직업훈련 LMS의 백엔드를 2년 3개월간 주 담당했습니다. 수강 진도율이 정부 훈련비 환급의 근거이고 교강사 정산액이 급여 지급의 근거인 도메인이라, 기능이 동작하는지보다 **값이 맞는지**를 먼저 두고 설계하는 습관이 여기서 생겼습니다.
+For two years and three months I owned the backend of a government-funded vocational training LMS. In that domain, course progress is the basis for tuition reimbursement and instructor settlement figures are the basis for actual payroll. That shaped a habit: before asking whether a feature works, ask whether the numbers are right.
 
-개발과 함께 배포·운영을 겸했습니다. 배포할 때마다 시청 중인 수강생의 진도가 사라지는 것을 직접 겪었기 때문에, 무중단 배포를 "있으면 좋은 기능"이 아니라 데이터 정합성 요건으로 다룹니다.
+I handled deployment and operations alongside development. I watched learners lose their viewing progress every time we shipped, so I treat zero-downtime deployment as a data-integrity requirement rather than a nice-to-have.
 
-## 일하는 방식
+## How I work
 
-- **전면 재작성이 불가능한 조건**을 기본값으로 둡니다. 대부분의 서비스는 이미 돌고 있었고, 그래서 어디부터 어떻게 잘라낼지를 정하는 일이 업무의 절반이었습니다. 리허설 환경에서 패턴을 먼저 확정하고 본 환경에 적용하는 순서를 자주 씁니다.
-- **전제가 틀렸다고 판단하면 되돌립니다.** 도입했던 토큰 회전 방식이 "동시 요청이 없다"는 전제 위에서만 성립한다는 것을 확인하고 걷어냈습니다. 개인 프로젝트에서는 서버 크롤링 구조가 1인 운영에서 비용이 가장 큰 부품이라 판단해 제거했습니다.
-- **선택의 근거와 포기한 대안을 함께 남깁니다.** 자동화하지 못한 수동 절차도 순서대로 적어 둡니다. 다음 사람이 같은 함정을 다시 밟지 않게 하는 것이 목적입니다.
-- **테스트는 실패해도 아무 일이 일어나지 않는 지점**에 먼저 겁니다. 예외가 나는 버그는 어차피 발견되지만, 조용히 틀어지는 값은 사람이 알아차릴 수 없습니다.
+- **I assume a full rewrite is off the table.** Most of the services I touched were already running and already earning. So half the job was deciding where to cut first. I lean on the same sequence repeatedly: pin down the pattern in a rehearsal environment, then apply it to production in one pass.
+- **I roll things back when the premise turns out to be wrong.** I introduced refresh-token rotation, then found it only holds if there are no concurrent requests — two browser tabs break it — and removed it. In a side project I cut the server-side crawler after concluding that a scheduled collector is the most expensive part to run alone.
+- **I write down the reasoning and the alternatives I rejected.** Including the steps I failed to automate, in order. The point is that whoever comes next doesn't fall into the same hole.
+- **I put tests where failure is silent.** Bugs that throw get found anyway. What's dangerous is a value that quietly goes wrong — an enum and an external code table drifting apart until a recommendation score silently reads zero.
 
-## 지금
+## Now
 
-퇴사 후 AWS Solutions Architect – Associate와 HashiCorp Terraform Associate를 취득하고, 클라우드 인프라 엔지니어링 과정을 수료했습니다. 최종 프로젝트에서 인프라 총괄로 물리 서버 4대 위에 온프레미스 Kubernetes와 AWS를 연결한 하이브리드 환경을 설계·구축했습니다.
+After leaving, I earned the AWS Solutions Architect – Associate and HashiCorp Terraform Associate certifications and completed a cloud infrastructure engineering program. As infrastructure lead on the final project, I designed and built a hybrid environment connecting an on-premise Kubernetes cluster across four physical servers to AWS.
 
-모바일 앱 두 종을 1인 개발로 출시해 운영하고 있습니다. 기획부터 결제·구독 서버 검증, 스토어 릴리즈까지 혼자 하면서, 혼자 감당할 수 있는 구조가 무엇인지 계속 시험하고 있습니다.
+I also ship and operate two mobile apps as a solo developer — planning, server-side purchase verification, store releases, all of it. Doing every part alone keeps testing the same question: what shape of system can one person actually carry?
 
-자세한 내용은 [이력]({{ '/resume/' | relative_url }}) 페이지에 정리했습니다.
+More detail is on the [résumé]({{ '/resume/' | relative_url }}) page.
 
-## 연락
+## Contact
 
-- 이메일 — [sjungwon03@gmail.com](mailto:sjungwon03@gmail.com)
+- Email — [sjungwon03@gmail.com](mailto:sjungwon03@gmail.com)
 - GitHub — [github.com/sjungwon03](https://github.com/sjungwon03)

@@ -1,232 +1,243 @@
 ---
 layout: page
-title: 이력
-lede: 소속 기준으로 정리했습니다. 각 항목은 무엇을 만들었고 그때 무엇을 고민했는지를 함께 적었습니다.
-description: 손정원 이력 — 백엔드와 클라우드 인프라. 스마트동스쿨 · 새싹 · 사이드 프로젝트 · KOSA.
+title: Résumé
+lang: en
+alt_url: /ko/resume/
+lede: Organised by where the work happened. Each entry covers what I built and what I weighed while building it.
+description: Jungwon Son — backend and cloud infrastructure. Smart Dong School · SeSAC · side projects · KOSA.
 ---
 
 <div class="resume-actions">
-  <a class="btn primary" href="mailto:sjungwon03@gmail.com">이메일로 연락</a>
+  <a class="btn primary" href="mailto:sjungwon03@gmail.com">Email me</a>
   <a class="btn" href="https://github.com/sjungwon03" rel="noopener">GitHub</a>
 </div>
 
-## 개요
+## Overview
 
-소속 기준으로 네 갈래입니다. 재직 기간에 담당한 회사 서비스, 퇴사 후 교육 과정에서 진행한 팀 프로젝트 두 건, 그리고 1인 개발로 출시해 운영 중인 앱입니다.
+Four groups, by affiliation: services I owned during full-time employment, two team projects from training programs after leaving, and apps I built and ship solo.
 
-| 소속 | 기간 | 프로젝트 | 역할 |
+| Where | Period | Projects | Role |
 | --- | --- | --- | --- |
-| **스마트동스쿨** (회사) | 2023.09 ~ 2025.11 | PHP 11개 사이트 · 내일동스쿨 · 키즈동 · 독학동 · 에듀동 · 블로그동 · 도트타이머 · 인프라 IaC | 백엔드 주 담당 (풀스택) · 배포·운영 겸임 |
-| **새싹** (교육) | 2026.06 ~ 2026.07 | YouthPick — 청년정책 추천 플랫폼 (5인) | 팀장 겸 풀스택 |
-| **사이드** | 2026.02 ~ 현재 | Maiary · Curora — 모바일 앱 2종 |
-| **KOSA** (교육) | 2026.05 ~ 2026.06 | 최종 프로젝트 — Proxmox + AWS 하이브리드 인프라 (5인) | 인프라 총괄 · 아키텍처 설계 |
+| **Smart Dong School** (employment) | 2023.09 – 2025.11 | 11 PHP sites · Naeildong School · Kizdong · Dokhakdong · Edudong · Blogdong · Dotetimer · infrastructure as code | Backend owner (full-stack) · deployment & ops |
+| **SeSAC** (training) | 2026.06 – 2026.07 | YouthPick — youth policy recommendation platform (team of 5) | Team lead, full-stack |
+| **Side** | 2026.02 – present | Maiary · Curora — two mobile apps | Solo — from concept to operations |
+| **KOSA** (training) | 2026.05 – 2026.06 | Final project — Proxmox + AWS hybrid infrastructure (team of 5) | Infrastructure lead · architecture |
 
 ---
-## 보유 기술
 
-| 구분 | 내용 |
+## Skills
+
+| Area | |
 | --- | --- |
 | **Language** | Java 21, TypeScript / JavaScript, PHP, Dart |
 | **Backend** | Spring Boot 3.5, NestJS, Koa, Express, Apollo Server 4, TypeGraphQL, GraphQL, REST |
-| **Data** | MySQL, PostgreSQL, Redis, TypeORM, Prisma, JPA / Hibernate, DataLoader, Flyway, MinIO(S3) |
-| **Auth** | OAuth 2.0 자체 구현(Google·Naver·Kakao·Apple), JWT, Spring Security, 역할·권한 모델 |
+| **Data** | MySQL, PostgreSQL, Redis, TypeORM, Prisma, JPA / Hibernate, DataLoader, Flyway, MinIO (S3) |
+| **Auth** | OAuth 2.0 implemented from scratch (Google · Naver · Kakao · Apple), JWT, Spring Security, role & permission modelling |
 | **Realtime** | Socket.IO 4, STOMP over WebSocket |
 | **Test** | JUnit 5 + H2, Mockito, `@WebMvcTest` / `@DataJpaTest`, Jest, Vitest |
-| **Cloud** | AWS (EC2, S3, VPC, NLB/ALB, Route53, ACM, CloudFront, CodeDeploy, EKS/Fargate, Site-to-Site VPN, Client VPN) |
+| **Cloud** | AWS (EC2, S3, VPC, NLB/ALB, Route 53, ACM, CloudFront, CodeDeploy, EKS/Fargate, Site-to-Site VPN, Client VPN) |
 | **IaC** | Terraform, Ansible, Packer |
 | **Container** | Kubernetes (kubeadm HA), Docker, Docker Compose, Helm, MetalLB, Ceph CSI |
-| **Virtualization** | Proxmox VE (HA 클러스터), Ceph RBD, MinIO(S3 호환) |
-| **Network / Security** | pfSense, VLAN 분리, HAProxy + Keepalived VIP, WireGuard / IPsec VPN, nginx, IAM 역할 설계 |
-| **CI/CD** | GitHub Actions, ArgoCD(GitOps), AWS CodeDeploy, PM2, 블루/그린 무중단 배포 |
-| **Observability** | Prometheus, Grafana, Loki, Thanos, New Relic, Log4j2 → DB 적재 |
+| **Virtualisation** | Proxmox VE (HA cluster), Ceph RBD, MinIO |
+| **Network / Security** | pfSense, VLAN segmentation, HAProxy + Keepalived VIP, WireGuard / IPsec VPN, nginx, IAM role design |
+| **CI/CD** | GitHub Actions, ArgoCD (GitOps), AWS CodeDeploy, PM2, blue/green zero-downtime deployment |
+| **Observability** | Prometheus, Grafana, Loki, Thanos, New Relic, Log4j2 → database sink |
 | **Frontend** | React 19, Next.js, Flutter, TanStack Query, Zustand, Riverpod |
-| **Practice** | 도메인 주도 패키지 설계, 트랜잭션 경계 설계, N+1 최적화, 무중단 배포, IaC, 코드리뷰 체계 수립 |
+| **Practice** | Domain-driven package design, transaction boundary design, N+1 elimination, zero-downtime deployment, IaC, code review process |
 
 ---
 
-## 1. 스마트동스쿨 (회사)
+## 1. Smart Dong School (employment)
 
-**2023.09 ~ 2025.11 (2년 3개월)** · 백엔드 개발자 (풀스택) · 배포·운영 겸임 · 산업기능요원(보충역) 복무 — 2023.12 편입 / 2025.11 만기 소집해제
+**2023.09 – 2025.11 (2 years 3 months)** · Backend developer (full-stack) · deployment & operations · industrial technical personnel service — enrolled 2023.12, discharged 2025.11
 
-정부지원 직업훈련 LMS를 중심으로 교육 서비스 여러 종과 그 배포·운영을 담당했습니다. 대부분이 이미 운영 중인 서비스였고, 전면 재작성이 불가능한 조건에서 어디부터 어떻게 잘라낼지를 정하는 일이 업무의 절반이었습니다.
+I worked across several education services centred on a government-funded vocational training LMS, and handled their deployment and operations. Most were already live, so half the job was deciding where to cut first when a full rewrite wasn't an option.
 
-### 내일동스쿨 — 직업훈련 LMS 백엔드 주 담당
+### Naeildong School — backend owner, vocational training LMS
 
 `Koa · Apollo Server 4 · TypeGraphQL · TypeORM · MySQL`
 
-- **교강사 정산 시스템** — 기간별 채점 시험·과제 건수와 답변한 질의응답을 집계해 월별 정산액을 산출하는 배치를 개발했습니다. 산출된 금액이 실제 급여 지급의 근거로 사용됩니다.
-- **자동 알림 규칙 엔진** — 진도율 · 시험 응시 자격 · 수료 여부 등 조건 12종을 단일 테이블 상속(STI)으로 모델링해, 운영자가 코드 수정 없이 수강생 알림 캠페인을 구성할 수 있게 했습니다. SMS 전용이던 발송 폼을 채널 독립 구조로 분리하고 이메일 발송을 추가했습니다.
-- **공공기관 규제 데이터 연동** — 훈련 모니터링 기관에 수강·출결·성적을 주기 전송하는 파이프라인을 구현했습니다. 별도 스키마의 미러 테이블에 변경분만 스냅샷으로 저장한 뒤 전송하고, 전송 결과를 Slack으로 리포팅해 매일 성공 여부를 확인할 수 있게 했습니다.
-- **필터 DSL 컴파일러** — 중첩 가능한 GraphQL 필터 입력을 TypeORM 조건식으로 재귀 변환하는 공통 모듈을 만들어 목록 쿼리 대부분에 적용했습니다.
-- **권한 체계** — 권한 데코레이터를 리졸버가 아니라 엔티티 필드 단위까지 내려 붙였기 때문에, 매번 조회하면 한 요청에서 권한 쿼리가 수백 번 나갑니다. 첫 조회 결과를 요청 컨텍스트에 붙들어 두어 요청당 한 번으로 고정했습니다.
-- 주민등록번호를 AES로 암호화해 저장하고, 복호화된 평문이 다시 저장되는 경우를 TypeORM Subscriber에서 검사해 차단했습니다.
+- **Instructor settlement system** — a batch that aggregates graded exams, graded assignments and answered Q&A over a period to compute monthly settlement amounts. The figures it produces are the basis for actual payroll.
+- **Automated notification rule engine** — modelled 12 condition types (progress rate, exam eligibility, completion status, and so on) with single-table inheritance so operators can assemble learner notification campaigns without a code change. I also split the SMS-only send form into a channel-independent structure and added email.
+- **Regulatory data pipeline to a public agency** — periodic transmission of enrolment, attendance and grades to the training monitoring authority. Changed rows are snapshotted into mirror tables in a separate schema first, then sent from the snapshot; results are reported to Slack so success can be confirmed daily.
+- **Filter DSL compiler** — a shared module that recursively converts nested GraphQL filter input into ORM predicates, applied across most list queries.
+- **Permission system** — authorisation decorators sit not only on resolvers but down at the entity-field level, so resolving them naively means hundreds of permission queries in a single request. I memoise the first lookup on the request context, pinning it to one query per request.
+- Resident registration numbers are stored AES-encrypted; an ORM subscriber checks for decrypted plaintext being written back and blocks it, so a mistake in application code is caught at the persistence layer.
 
-### 실시간 수강 추적 소켓 서버 — 단독 설계·구축
+### Real-time progress tracking socket server — designed, built and operated solo
 
 `Socket.IO 4 · TypeORM · PM2`
 
-- **문제** — 강의 시청 추적이 모놀리식 백엔드 안에 있어, 배포할 때마다 시청 중인 수강생의 연결이 끊기고 진도가 유실됐습니다. 진도율은 정부 훈련비 환급의 근거로 쓰이는 데이터입니다.
-- **제약** — 기존 Socket.IO v2와 v4는 와이어 프로토콜이 호환되지 않아 제자리 업그레이드가 불가능했습니다.
-- **해결** — 추적 기능을 별도 서비스로 분리하고, 종료 시그널 수신 시 세션 캐시 전체를 순회하며 시청 중인 전원의 진도를 저장한 뒤 종료하는 graceful shutdown을 구현했습니다. 프로세스 매니저의 무중단 재시작과 함께 사용해 배포 중 진도 유실을 없앴습니다.
-- 종료 핸들러를 판별 유니온으로 설계해, 이미 끊긴 소켓에 접근하는 코드를 컴파일 단계에서 걸러냈습니다.
-- 세션 캐시를 소켓 식별자가 아닌 계정 기준으로 키잉해 동시 접속(부정 수강) 탐지를 O(1)로 처리했습니다.
+- **Problem** — lecture view tracking lived inside the monolith, so every deployment dropped the connections of learners mid-lecture and lost their progress. Progress is the data that government tuition reimbursement is based on.
+- **Constraint** — Socket.IO v2 and v4 are not wire-compatible, so an in-place upgrade wasn't possible.
+- **Solution** — I extracted tracking into a separate service with a graceful shutdown: on the termination signal it walks the entire session cache, persists progress for everyone currently watching, then exits. Paired with the process manager's zero-downtime restart, this eliminated progress loss during deployment.
+- The shutdown handler is a discriminated union keyed on the reason for termination, so code that would touch an already-closed socket is caught at compile time.
+- The session cache is keyed by account rather than socket id, which makes concurrent-session detection constant time.
 
-### 도트타이머 — Express → NestJS 무중단 이관
+### Dotetimer — Express to NestJS, without downtime
 
 `NestJS 11 · GraphQL · TypeORM`
 
-- 4년치 프로덕션 코드를 이관해야 했으나 운영 중인 모바일 앱 API가 연결돼 있어 한 번에 교체할 수 없었습니다. 별도 저장소에서 일주일간 `ExpressAdapter`로 레거시가 NestJS 안에서 동작하는지 검증하고 이관 패턴을 확정한 뒤, 본 저장소에 하루 만에 순서대로 적용했습니다.
-- 레거시가 모듈 최상위에서 DataSource를 직접 잡고 있어 표준 ORM 모듈을 쓰면 트랜잭션 컨텍스트가 분리되는 문제가 있었습니다. 해당 패키지를 제거하고 DataSource 메타데이터를 런타임에 순회해 Repository를 동적 주입하는 모듈을 직접 구현했습니다. 이관 완료 후에는 이 모듈을 제거하고 표준 방식으로 되돌렸습니다.
-- **B2B 인사 모듈(도트비즈) 관리자 화면 신규 개발** — 전자 근로계약(템플릿 → 서명 → 승인), 직원 관리, 급여대장·급여명세서 인쇄·메일 발송, 출퇴근 기록 조회를 단계형 퍼널 UI로 구현했습니다.
-- DB 인덱스 설계, 동기화 서비스 락·타임아웃 처리, DB 로거의 winston 전환을 담당했습니다.
+- Four years of production code had to move, but a live mobile app API depended on it, so it couldn't be swapped in one go. I spent a week in a separate repository verifying that the legacy app runs inside NestJS behind an adapter and pinning down the migration pattern, then applied it to the main repository in a single day.
+- The legacy code grabbed the DataSource at module top level, so the standard ORM module would have split the transaction context in two. I removed that package and wrote a module that walks DataSource metadata at runtime to inject repositories dynamically. Once the migration was done, I removed the module and reverted to the standard approach.
+- **Built the B2B HR module's admin screens from scratch** — electronic employment contracts (template → signature → approval), employee management, payroll ledger and payslip printing and mailing, and attendance records, all as a staged funnel UI.
+- Also handled database index design, lock and timeout handling in the sync service, and moving the database logger onto winston.
 
-### 레거시 PHP 11개 사이트 — 점진적 현대화
+### 11 legacy PHP sites — incremental modernisation
 
-- 11개 사이트가 공통 인스턴스가 아니라 각각 포크된 형태로 존재해, 같은 수정을 11번 반복해야 하는 구조였습니다. 운영 중인 매출 사이트라 전면 재작성이 불가능해, 중복 비용이 큰 영역부터 공통화했습니다.
-- **자체 PHP REST 프레임워크 구축** — Composer도 프레임워크도 없는 환경에서 라우터, 인터셉터 체인(세션 인증·레이트리밋), DTO, 기능 플래그, 그리고 요청 호스트로 테넌트와 DB 테이블 접두어를 판별하는 멀티테넌시 코어를 직접 구현했습니다.
-- **마이크로 프론트엔드 도입** — 빌드 모드 이름을 엔트리 키로 사용해 화면 단위 React 번들을 빌드하고, 레거시 측에는 허용 목록에 남은 화면만 기존 코드로 렌더하는 분기를 두어 점진적으로 이관했습니다.
+- The 11 sites weren't a shared instance; each was a fork, so the same fix had to be repeated 11 times. They were live revenue-generating sites, so a rewrite was off the table. I consolidated the areas where duplication cost the most, first.
+- **Built a REST framework from scratch in PHP** — no Composer, no framework. Router, interceptor chain (session auth, rate limiting), DTOs, feature flags, and a multi-tenancy core that resolves the tenant and its database table prefix from the request host.
+- **Introduced a micro-frontend** — screen-level React bundles keyed by build mode, with a branch on the legacy side that renders only the screens still on the allowlist. Migrating a screen means removing it from that list; putting it back rolls the change out in reverse.
 
-### 키즈동 · 독학동 · 에듀동 — 유지보수
+### Kizdong · Dokhakdong · Edudong — maintenance
 
-- 내일동스쿨과 같은 코드베이스에서 갈라져 나온 세 서비스입니다. 장바구니 N+1 문제를 DataLoader 도입으로 해결했고, 독학동·에듀동이 코드베이스를 공유해 2개 저장소에 적용했습니다. 관리자 장바구니 조회 화면도 양쪽 프론트에 함께 붙였습니다.
-- 세 서비스에 공통으로 발생한 이슈(SMS/LMS 자동 전환, PG 엔드포인트 변경, 영상 플레이어 교체)를 일괄 처리했고, 담당자가 없어진 백엔드·결제 모듈 3개 저장소를 재직 기간 중 단독으로 맡았습니다.
+- Three services that branched off the same codebase as Naeildong School. I solved an N+1 in the shopping cart with a composite-key DataLoader — the key is a (user, product) pair, so simple batching doesn't group it — and applied it to two repositories covering three sites. I also added the admin cart view to both frontends.
+- I handled issues common to all three in one pass (SMS/LMS auto-switching, payment gateway endpoint changes, video player replacement) and took sole ownership of three backend and payment repositories that had been left without a maintainer.
 
-### 운영 AWS 인프라를 Terraform으로 코드화 (단독)
+### Codifying live AWS infrastructure with Terraform (solo)
 
-`Terraform · AWS · IAM · NLB · Client VPN` · 2025.06 ~ 2025.07
+`Terraform · AWS · IAM · NLB · Client VPN` · 2025.06 – 2025.07
 
-- **배경** — 콘솔에서 손으로 만들어 운영되던 인프라라, 무엇이 왜 그렇게 설정됐는지 아는 사람이 없고 변경 이력도 남지 않았습니다. 정부 훈련기관 심사를 앞두고 이중화와 접근 통제를 구성해야 했는데, 손으로 만들면 심사가 끝난 뒤 되돌릴 방법이 없습니다.
-- **state를 관리하는 리소스를 state 밖에 두었습니다.** state를 담는 버킷과 락 테이블을 같은 구성에서 만들면 순환 의존이 생겨, 별도 구성으로 분리했습니다. 버킷은 버전 관리 + 퍼블릭 액세스 차단 + 비현행 버전 만료 정책으로 하드닝했습니다.
-- **운영 중인 리소스는 import 대신 참조만** 했습니다. import해서 관리 대상으로 넘기면 그 뒤로는 apply 실수가 곧 운영 장애가 됩니다. Terraform이 기존 인프라를 삭제·변경할 수 없는 구조로 만들고, 생성하는 것과 읽는 것의 경계를 파일로 갈랐습니다. 머신 이미지는 ID를 박지 않고 최신 이미지를 태그로 자동 선택합니다.
-- **평시 구성과 심사 대응 구성을 디렉터리와 state 키로 분리**했습니다. 한쪽 apply가 다른 쪽 리소스를 건드리지 않고, 심사가 끝나면 해당 구성만 걷어내면 평시 상태가 남습니다.
-- **심사 대응** — TLS 종료를 기존 서버에 그대로 두기 위해 ALB가 아닌 NLB로 패스스루 이중화를 구성하고, Client VPN을 인증서 인증으로 세워 관리 접근을 공인망에서 떼어냈습니다. 보안 그룹 규칙은 CIDR이 아니라 소스 보안 그룹 기준으로 걸어 인스턴스가 늘어도 규칙을 고치지 않습니다.
-- **IAM 역할 3종을 서비스별 개별 정책의 조합으로** 구성해, 역할이 추가될 때 정책을 다시 쓰지 않게 했습니다. 다만 각 정책이 서비스 단위 와일드카드라 리소스 단위 최소 권한까지는 가지 못했고, 이 한계를 문서에 남겼습니다.
-- **Terraform으로 되지 않는 절차를 문서에 순서로 남겼습니다** — 탄력적 IP 재연결 시 순단이 발생한다는 경고, NAT 게이트웨이를 콘솔에서 만들고 라우팅 테이블을 고치는 순서입니다.
+- **Background** — the infrastructure had been built by hand in the console. Nobody knew why anything was configured the way it was, and no change history existed. With a government training-authority audit approaching we needed redundancy and access control, and building that by hand leaves no way to unwind it afterwards.
+- **I kept the resources that manage state out of state.** Creating the state bucket and lock table inside the same configuration produces a circular dependency, so they live in a separate configuration. The bucket is hardened with versioning, public-access blocking and non-current version expiry.
+- **Live resources are referenced, never imported.** Importing them into management means every subsequent apply mistake becomes a production incident. I made it structurally impossible for Terraform to delete or modify existing infrastructure, and split what is created from what is only read across separate files. Machine images are selected by tag rather than pinned by id.
+- **Steady-state and audit configurations are separated by directory and state key**, so an apply on one can't touch the other. When the audit ends, removing that configuration leaves the steady state intact.
+- **Audit response** — pass-through redundancy on an NLB rather than an ALB, to leave TLS termination on the existing servers and avoid migrating certificates; a Client VPN with certificate authentication so administrative access comes off the public network. Security group rules reference source security groups rather than CIDRs, so adding instances doesn't mean editing rules.
+- **Three IAM roles composed from per-service policies**, so adding a role means changing the combination rather than rewriting policy. Each policy is still a service-level wildcard, though — I did not get to resource-level least privilege, and recorded that limitation in the documentation.
+- **I wrote down, in order, the steps Terraform couldn't cover** — the brief outage when re-associating an elastic IP, and the sequence for creating the NAT gateway in the console and fixing the route table.
 
-### 배포 파이프라인 구축 및 운영
+### Deployment pipeline
 
-- **CI/CD 파이프라인을 5개 저장소에 구축**했습니다. `GitHub Actions → S3 → AWS CodeDeploy → EC2 + PM2` 구조로, 스테이징/프로덕션 CodeDeploy 애플리케이션을 분리하고 빌드 산출물에 `node_modules`를 함께 패키징해 배포 서버의 네트워크 의존을 제거했습니다.
-- **단일 EC2 + nginx 환경에서 블루/그린 무중단 배포를 구현**했습니다. PM2에 blue(4000)/green(4001) 두 앱을 정의하고, 유휴 프로필로 배포 → 헬스체크 10초 간격 5회 → 통과 시 nginx 프록시 전환 및 이전 서버 종료, 실패 시 롤백하는 스크립트를 작성했습니다.
-- **브랜치별 온프레미스 스테이징 환경**을 구성했습니다. 브랜치 이름을 프리픽스로 삼아 사내 서버에 브랜치별 PM2 프로세스를 띄워, 여러 기능을 동시에 QA할 수 있게 했습니다.
-- PM2 클러스터 전환 후 스케줄러가 인스턴스 수만큼 중복 실행되어 동일 문자가 여러 번 발송되던 문제를 단일 인스턴스 실행으로 해결하고, 그 근거를 README에 남겼습니다.
-- Docker → PM2 전환, Doppler 시크릿 관리 도입, New Relic APM 연동, Slack Webhook 배치 결과 리포팅, SonarQube 정적 분석 도입을 담당했습니다.
+`GitHub Actions · AWS CodeDeploy · PM2 · nginx`
+
+- **Built CI/CD across five repositories.** Staging and production deployment applications are separated, and dependencies are packaged with the build artefact so deployment doesn't depend on the network at deploy time.
+- **Implemented blue/green zero-downtime deployment without adding instances.** Deploy to the idle port, health check five times at ten-second intervals, switch the proxy only on success, roll back on failure. If the new version never comes up, the old one keeps serving.
+- **Per-branch on-premise staging** — branch-prefixed processes on an internal server, so several features can be QA'd at once instead of queueing for a single staging environment.
+- After moving to cluster mode, the scheduler ran once per instance and the same message went out multiple times. I fixed it to register the scheduler on a single instance and left the reasoning in the repository, so the next person raising the instance count doesn't hit the same trap.
 
 ---
 
-## 2. 새싹 (교육) — YouthPick
+## 2. SeSAC (training) — YouthPick
 
-**2026.06 ~ 2026.07** · SeSAC 청년취업사관학교 1차 프로젝트 · 5인 · 팀장 겸 풀스택
+**2026.06 – 2026.07** · SeSAC first team project · team of 5 · team lead, full-stack
 `Spring Boot 3.5 · Java 21 · MySQL · Redis · MinIO · React 19 · Docker Compose · GitHub Actions`
 
-백엔드는 인증·관리자·채팅·파일·프로필 도메인을, 프론트엔드는 관리자 화면 전체와 인증/세션 영역을 맡았습니다. 팀장으로 개발 프로세스와 배포 환경 전반도 함께 구성했습니다.
+On the backend I owned authentication, admin, chat, files and profile; on the frontend, all admin screens plus the auth and session layer. As team lead I also set up the development process and deployment environment.
 
-**도메인 구현**
+**Domain work**
 
-- **OAuth 2.0 소셜 로그인 3사를 라이브러리 없이 직접 구현**했습니다. 프론트가 별도 도메인의 SPA라 콜백 처리와 토큰 발급 시점을 직접 통제해야 했습니다. 3사의 서로 다른 응답을 단일 스키마로 정규화하고, provider 오류는 하나의 에러 코드로 수렴시켜 외부 서비스 정보가 클라이언트로 새지 않게 했습니다.
-- **refresh token rotate를 도입했다가 제거했습니다.** rotate는 동시 요청이 없다는 전제 위에서만 성립하는데, 탭 2개나 React StrictMode에서 그 전제가 깨져 401이 발생했습니다. 해시 저장 + HttpOnly 쿠키 + 제재 시 즉시 폐기 방식으로 대체했습니다. 증상은 프론트에 났지만 원인이 백엔드 설계라고 판단한 사례입니다.
-- **에러 코드를 하나의 열거형에 몰지 않고 규약을 인터페이스로 두어** 도메인별로 구현하게 했습니다. 도메인이 늘어도 기존 파일을 건드리지 않고, 프론트는 HTTP status가 아니라 응답 본문의 코드로 사용자 메시지를 매핑합니다.
-- **테스트를 실패해도 예외가 나지 않는 지점에 먼저 걸었습니다.** 온보딩 프로필의 열거형과 외부 공공 API 코드 매핑표가 어긋나면 추천의 해당 축이 예외 없이 0점이 됩니다. 사람이 알아차릴 수 없는 실패라 두 표의 동기화를 테스트가 강제하게 했습니다.
-- **관리자 백오피스 API와 대응 화면을 단독 개발**하고, 관리자에서 일반 도메인으로 흐르는 단방향 의존 구조로 책임을 분리했습니다. 인가 규칙은 보안 설정 한 곳에 모아 API가 추가될 때 누락이 발생하지 않게 했습니다.
-- **STOMP 실시간 채팅** — 브로커가 heartbeat 미선언 시 비활성으로 협상되어 유휴 커넥션이 끊기던 문제를 클라이언트·브로커·프록시 3계층 설정으로 해결했습니다. 브라우저가 WebSocket 핸드셰이크에 헤더를 실을 수 없어 인가 검사를 STOMP 인터셉터 단계로 옮겼습니다.
+- **Implemented OAuth 2.0 for three providers without a library.** The frontend is an SPA on a separate domain, so we needed direct control over callback handling and token issuance timing. I normalised three different provider responses into one schema and collapsed provider-side failures into a single error code, so no external service detail leaks to the client.
+- **Introduced refresh-token rotation, then removed it.** Rotation only holds if there are no concurrent requests, and that premise breaks with two tabs open or under React StrictMode — the result was spurious 401s. I replaced it with hashed storage, HttpOnly cookie delivery and immediate revocation on suspension. The symptom showed up on the frontend, but the cause was a backend design decision.
+- **Made error codes an interface rather than one big enum**, implemented per domain. Adding a domain doesn't touch existing files, and the frontend maps user-facing messages from the response body's code rather than the HTTP status.
+- **Put tests where failure is silent.** If the onboarding profile enum and the external public-API code table drift apart, that axis of the recommendation silently scores zero — no exception, nothing to notice. I made a test enforce that the two stay in sync.
+- **Built the admin back office API and its screens solo**, with a one-way dependency from admin into the domain layer. Authorisation rules live in one security configuration so a new endpoint can't quietly ship without them.
+- **STOMP real-time chat** — the broker negotiated heartbeats as disabled when they weren't declared, dropping idle connections; fixed with a consistent setting across client, broker and proxy. Since browsers can't attach headers to the WebSocket handshake, authorisation moved into the STOMP interceptor.
 
-**팀 리드 · 배포 환경**
+**Team lead and deployment**
 
-- **Docker Compose로 전체 스택을 단일 명령으로 기동**하게 구성했습니다. 프록시가 API를 backend 컨테이너로 넘겨 브라우저 기준 same-origin이 되므로, **배포 도메인이 바뀌어도 CORS 설정을 수정할 필요가 없습니다.**
-- **양 레포 GitHub Actions CI를 구축**했습니다. 백엔드는 포맷 게이트 → 빌드 + in-memory DB 테스트로, **외부 인프라 없이 CI에서 그대로 돕니다.** 실행 취소(`concurrency`), 최소 권한(`contents: read`), `persist-credentials: false`를 적용해 토큰이 워크스페이스에 남지 않게 했습니다.
-- **애플리케이션 로그를 DB로 적재하는 파이프라인을 직접 구현**했습니다. 내장 JDBC Appender는 모든 컬럼을 문자열로 바인딩해, 비로그인 요청에서 빈 문자열이 정수 컬럼으로 들어가 insert가 통째로 실패합니다. 값이 없으면 NULL을 명시하는 커스텀 Appender를 만들고, 비동기 논블로킹 버퍼로 감싸 요청 스레드가 DB 쓰기를 기다리지 않게 했습니다. appender 예외도 삼켜 **로그 저장 실패가 애플리케이션을 중단시키지 않습니다.**
-- 브랜치 전략과 PR 리뷰 규칙을 정하고, 요청 컨텍스트 필터로 추적 ID · 경로 · IP · 사용자 ID를 남겨 관리자 화면에서 경고 이상 로그를 조회할 수 있게 했습니다.
+- **Docker Compose brings the whole stack up with one command.** The proxy forwards the API to the backend container, so the browser sees a same origin — which means **changing the deployment domain doesn't require touching CORS configuration.**
+- **CI on both repositories via GitHub Actions.** The backend runs a format gate, then build plus in-memory database tests, so **it runs in CI with no external infrastructure.** Concurrency cancellation, least privilege (`contents: read`) and `persist-credentials: false` keep the token out of the workspace.
+- **Wrote the pipeline that persists application logs to the database.** The built-in JDBC appender binds every column as a string, so an empty value from an unauthenticated request lands in an integer column and the whole insert fails. I wrote a custom appender that binds an explicit NULL when the value is absent and wrapped it in an asynchronous non-blocking buffer, so request threads never wait on a database write. The appender also swallows its own exceptions, so **a logging failure can't take down the application.**
+- Defined the branch strategy and PR review rules, and added a request-context filter carrying trace id, path, IP and user id so warnings and above are queryable from the admin screen.
 
-## 3. 사이드 프로젝트 — Maiary · Curora
+---
 
-**2026.02 ~ 현재** · 1인 개발 · 앱스토어 출시 및 운영 · 누적 32개 빌드 릴리즈
+## 3. Side projects — Maiary · Curora
+
+**2026.02 – present** · solo · shipped on the App Store · 32 cumulative release builds
 `Flutter · Flame · NestJS · Prisma · PostgreSQL · Socket.IO · OpenAI`
 
-기획부터 출시·운영까지 단독 수행한 모바일 앱 2종입니다. 혼자 운영하는 조건에서 무엇을 두고 무엇을 없앨지 판단한 사례가 대부분입니다.
+Two mobile apps taken from concept to release and operation alone. Most of the work here is deciding what to keep and what to cut when one person has to carry it.
 
-- **결제·구독을 서버에서 검증합니다.** 클라이언트가 보낸 영수증을 그대로 믿으면 조작된 구매를 막을 수 없어, Apple과 Google 양쪽 서버에 직접 확인하고 갱신·만료·유예기간은 웹훅으로 받습니다. 원본 페이로드를 보관해 재처리가 가능합니다.
-- **LLM 호출마다 스키마 제약과 결정론적 폴백**을 두어, 모델 호출이 실패해도 모든 필드가 사용자 언어로 채워집니다. 캐시 테이블의 만료 시각을 레이트 리미터로 겸용해 별도 쿼터 시스템 없이 호출량을 제한하고, 에러 코드까지 캐싱해 실패한 요청이 반복 재시도되며 과금되는 것을 막았습니다.
-- **Curora는 서버 크롤링 기반 설계를 로컬 우선 구조로 바꿨습니다.** 1인 운영에서 주기적 수집기의 운영 비용이 가장 크다고 판단해, 앱이 직접 RSS를 파싱해 기기에 저장하고 서버는 인증·AI·결제만 담당하게 했습니다. 인프라가 API 서버 한 대로 줄고 오프라인 읽기를 얻었으며, 크로스 디바이스 동기화를 포기했습니다.
-- RSS 2.0 · Atom · RDF 세 포맷의 파서를 라이브러리 없이 직접 구현했습니다(BOM 처리, RFC-822 날짜 파싱, 페이지네이션 포함).
-- **iOS 홈 위젯을 네이티브 WidgetKit / Swift로 구현**하고 App Group 기반 데이터 공유를 구성했습니다. 위젯은 구독 전용 기능입니다.
-- Socket.IO 멀티플레이에 Redis 어댑터를 초기부터 적용해, 사용자가 적은 시점부터 다중 인스턴스 확장이 가능하게 했습니다. 회사 프로젝트에서 인메모리 캐시 때문에 단일 인스턴스로 묶였던 경험이 이 판단의 배경입니다.
-- 4개 언어(한·영·일·힌디)를 지원하며, 관리 콘솔은 스키마에서 자동 생성해 별도로 개발하지 않았습니다.
+- **Purchases and subscriptions are verified server-side.** Trusting a client-supplied receipt means fraudulent purchases go through, so I verify directly against both vendors' servers and receive renewal, expiry and grace period through webhooks. The raw payload is retained so events can be reprocessed.
+- **Every LLM call has a schema constraint and a deterministic fallback**, so a failed model call still leaves every field populated in the user's language. A cache table's expiry timestamp doubles as a rate limiter, capping call volume without a separate quota system, and error responses are cached too so failed requests don't silently retry and bill.
+- **Curora moved from a server-crawling design to a local-first one.** For a one-person operation, a scheduled collector is the most expensive part to run, so the app parses feeds and stores them on device while the server handles only auth, AI and payments. Infrastructure dropped to a single API server and offline reading came along with it; cross-device sync was the explicit trade-off.
+- Wrote parsers for RSS 2.0, Atom and RDF by hand — BOM handling, RFC-822 date parsing and pagination included — rather than take a dependency.
+- **Built four iOS home screen widgets natively in WidgetKit / Swift** with App Group data sharing. Widgets are a subscriber-only feature.
+- Attached a Redis adapter to Socket.IO multiplayer from the start, while the user count was still small, so scaling out later doesn't mean revisiting the architecture. The reason is a constraint I hit at work: an in-memory cache that pinned a service to a single instance.
+- Supports four languages (Korean, English, Japanese, Hindi). The admin console is generated from the schema rather than built separately.
 
 ---
-## 4. KOSA (교육) — 최종 프로젝트
 
-**2026.05 ~ 2026.06** · KOSA 클라우드 인프라 엔지니어링 · 팀 GARDEN 5인 · 인프라 총괄
+## 4. KOSA (training) — final project
+
+**2026.05 – 2026.06** · KOSA cloud infrastructure engineering · team GARDEN, 5 people · infrastructure lead
 `Proxmox VE · Kubernetes · Terraform · Ansible · Packer · AWS`
 
-물리 서버 4대 Proxmox 클러스터 위에 VM 25대 · VIP 5종 · K8s HA 클러스터(노드 7 / 파드 106)를 구성하고 AWS와 VPN으로 연결한 하이브리드 인프라.
+A hybrid environment: 25 VMs and a Kubernetes HA cluster (7 nodes, 106 pods) on a four-node Proxmox cluster, connected to AWS over VPN.
 
-### 네트워크 · 고가용성 설계
+### Network and high availability
 
-- **VLAN 4단 분리**(공용 / DMZ·LB / 내부 서비스 / 관리)와 1G·10G 물리 망 분리(관리·외부 접근 / Ceph 스토리지 전용)를 설계했습니다.
-- **Keepalived VIP 5종**(DNS · Vault · HAProxy · K8s API · 모니터링)을 배치하고, 같은 역할의 VM은 서로 다른 물리 호스트에 분산했습니다.
-- **VIP 체이닝** — HAProxy VIP → K8s API VIP 구조로 구성해, 마스터 노드 구성이 바뀌어도 LB 설정을 수정하지 않게 했습니다.
+- **Four-tier VLAN segmentation** (public / DMZ and load balancing / internal services / management) plus physical 1G and 10G separation — management and external access on one, storage replication on the other.
+- **Five Keepalived VIPs** (DNS, Vault, HAProxy, Kubernetes API, monitoring), with VMs of the same role distributed across different physical hosts.
+- **VIP chaining** — HAProxy VIP in front of the Kubernetes API VIP, so changing the master node set doesn't mean editing load balancer configuration.
 
-### 설계 판단
+### Design decisions
 
-- **순환 의존성 차단** — CI/CD·Vault·MinIO를 K8s 외부 VM에 배치했습니다. Terraform state를 저장하는 MinIO가 클러스터 안에 있으면 클러스터를 재구축할 수 없기 때문입니다.
-- **관리 인터페이스 배치** — Proxmox 관리 IP를 pfSense 하위에 두면 pfSense 장애 시 하이퍼바이저 콘솔에 접근할 수 없습니다. 이를 피해 물리 라우터 하위에 배치했고, pfSense 이중화는 이 규모에서 필요 이상이라고 판단해 적용하지 않은 사실과 근거를 문서에 남겼습니다.
-- **스토리지 계층 분리** — K8s 마스터는 etcd의 fsync 지연 민감도 때문에 로컬 볼륨을, 나머지 VM은 Ceph RBD를 사용합니다. Ceph 복제 트래픽은 MTU 9000 전용 10G 망으로 격리했습니다.
-- **폐쇄망 전환 순서 정의** — 인터넷 구간에서 Nexus 미러링을 완료한 뒤 방화벽 룰을 제거하는 순서를 정의했습니다. 실제 검증까지는 진행하지 못했고, 문서에 한계로 명시했습니다.
+- **Breaking circular dependencies** — CI/CD, Vault and object storage sit on VMs outside Kubernetes. If the storage holding Terraform state lives inside the cluster, losing the cluster also loses the means to rebuild it.
+- **Where the management interface sits** — putting the hypervisor management IP behind the firewall means losing console access when the firewall fails. It sits under the physical router instead. I judged firewall redundancy unnecessary at this scale and recorded that decision, and its cost, in the documentation.
+- **Storage tiering by workload** — Kubernetes masters use local volumes because etcd is sensitive to fsync latency; everything else uses distributed storage, with replication traffic isolated on a dedicated 10G network.
+- **Defined the air-gap transition order** — mirror packages while the internet path is still open, then remove the firewall rules. I did not get to verify this end to end and flagged that as a limitation.
 
-### Kubernetes 플랫폼 스택
+### Kubernetes platform
 
-- Helm 기반으로 MetalLB(베어메탈 L2 LoadBalancer + 주소풀), Ceph CSI(StorageClass 자동 적용, 필수 변수 검증), Harbor · ArgoCD · Gitea, Percona XtraDB Cluster를 구축했습니다.
-- PXC는 `podAntiAffinity`를 `requiredDuringScheduling`으로 설정해, 3개 복제본이 같은 노드에 배치되지 않게 했습니다.
-- Operator CRD 레이스 컨디션, MetalLB immutable selector 충돌 등 배포 중 발생한 이슈를 스크립트 레벨에서 우회 처리했습니다.
+- Helm-based build-out of MetalLB (bare-metal L2 load balancing with an address pool), Ceph CSI, Harbor, ArgoCD, Gitea and a Percona XtraDB Cluster.
+- The database cluster uses required — not preferred — anti-affinity, so three replicas can never land on the same node. Preferred scheduling lets the scheduler pack them together when resources are tight, which quietly defeats the point of running three.
+- Worked around operator CRD race conditions and immutable selector conflicts at the script level during rollout.
 
-### AWS 하이브리드
+### AWS hybrid
 
-- Terraform 모듈 9종 구성 — `vpc · ec2 · nlb · route53 · keypair · eks · site_to_site_vpn · wireguard · cloudfront`
-- **IPsec Site-to-Site VPN**을 pfSense와 연결하고(양 터널 암호화 스위트 고정, pfSense 입력용 설정 출력 포함), WireGuard 경로도 병행 구성했습니다.
-- **클라우드 버스팅** — Prometheus를 폴링해 CPU 임계치 초과 시 HAProxy ACL 파일을 토글하고 백엔드를 온프레미스에서 클라우드로 전환하는 구조를 설계했습니다.
-- **비용 산정** — Fargate 파드 단가를 직접 계산해 Active-Active 70/30 구성을 월 약 $180으로 산정하고, 클라우드 버스팅은 평시 약 $120/월, 버스팅 시 약 $150~200/월로 비교했습니다.
+- Nine Terraform modules — VPC, EC2, NLB, Route 53, key pair, EKS, two VPN paths and CloudFront. The decision to modularise came after paying the cost of two configurations duplicating the same blocks in the work repository.
+- **IPsec site-to-site VPN** terminated on pfSense, with encryption suites pinned on both tunnels, plus a WireGuard path in parallel.
+- **Cloud bursting** — a cron polls Prometheus and, past a CPU threshold, toggles an HAProxy ACL to shift backends from on-premise to cloud.
+- **Cost modelling** — I calculated the per-pod Fargate rate directly and priced an active-active 70/30 split at roughly $180 per month, comparing it against bursting at about $120 in steady state and $150–200 while bursting.
 
-### 문서화
+### Documentation
 
-선택의 근거와 채택하지 않은 대안을 함께 기록한 설계 문서를 직접 작성했습니다. Percona · Ceph RBD · Proxmox HA · DMZ 분리 심화 문서와, 팀원 4인이 각자 담당 영역을 구축할 수 있도록 하는 가이드를 포함합니다.
+Wrote the design documentation myself, recording the reasoning behind each choice alongside the alternatives I rejected — deep-dives on the database cluster, block storage, hypervisor HA and DMZ separation, plus build guides for each of the other four members' areas.
 
 ---
-## 학력
 
-| 기간 | 내용 |
+## Education
+
+| Period | |
 | --- | --- |
-| 2017.03 ~ 2026.08 | **세종대학교** 컴퓨터공학과 (졸업예정) |
+| 2017.03 – 2026.08 | **Sejong University** — Computer Engineering (expected graduation) |
 
 ---
-## 교육
 
-| 기간 | 과정 |
+## Training
+
+| Period | Program |
 | --- | --- |
-| 2026.06 ~ 재학 중 | **SeSAC 청년취업사관학교** — 1차 프로젝트 팀장 (YouthPick) |
-| 2026.05 ~ 2026.06 | **KOSA 클라우드 인프라 엔지니어링** — 최종 프로젝트 인프라 총괄 |
+| 2026.06 – present | **SeSAC** — team lead, first project (YouthPick) |
+| 2026.05 – 2026.06 | **KOSA Cloud Infrastructure Engineering** — infrastructure lead, final project |
 
 ---
-## 자격증 · 어학
 
-| 자격 | 발급기관 | 취득일 |
+## Certifications
+
+| Certification | Issuer | Date |
 | --- | --- | --- |
-| **정보처리기사** | 한국산업인력공단 | 2025.06.13 |
-| **SQL 개발자 (SQLD)** | 한국데이터산업진흥원 | 2025.04.04 |
 | **AWS Certified Solutions Architect – Associate** | Amazon Web Services | 2025.12.30 |
 | **HashiCorp Certified: Terraform Associate (004)** | HashiCorp | 2026.03.21 |
-| **TOEIC Speaking IH (150점)** | YBM | 2026.06.14 |
+| **Engineer Information Processing** | HRD Korea | 2025.06.13 |
+| **SQL Developer (SQLD)** | Korea Data Agency | 2025.04.04 |
+| **TOEIC Speaking IH (150)** | YBM | 2026.06.14 |
 
 ---
-## 수상
 
-| 수상 | 일자 |
+## Awards
+
+| Award | Date |
 | --- | --- |
-| 교내 SW코딩경시대회 3등 | 2020.12.11 |
+| 3rd place, university SW coding competition | 2020.12.11 |
 
 ---
-## 병역
 
-| 구분 | 내용 |
+## Military service
+
+| | |
 | --- | --- |
-| 병역 | **필** — 산업기능요원(보충역) 만기 소집해제 |
-| 복무처 | 스마트동스쿨 (병역지정업체) — 상단 경력과 동일 |
-
+| Status | **Completed** — industrial technical personnel, discharged on schedule |
+| Placement | Smart Dong School (designated company) — same as the employment above |

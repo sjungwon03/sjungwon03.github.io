@@ -1,0 +1,32 @@
+---
+layout: default
+title: null
+lang: ko
+permalink: /ko/
+alt_url: /
+---
+<section class="home-head">
+  <h1>만든 것과<br>그때 고민한 것을 적습니다.</h1>
+  <p>백엔드와 클라우드 인프라를 다룹니다. 정합성이 정산으로 직결되는 서비스에서 API 서버를 주 담당했고, 배포가 데이터를 훼손하지 않게 만드는 일을 반복했습니다.</p>
+  <div class="resume-actions">
+    <a class="btn primary" href="{{ '/ko/resume/' | relative_url }}">이력 보기</a>
+    <a class="btn" href="{{ '/ko/about/' | relative_url }}">소개</a>
+  </div>
+</section>
+
+{%- assign posts = site.posts | where: "lang", "ko" -%}
+{%- if posts.size > 0 %}
+<ul class="post-list">
+  {%- for post in posts %}
+  <li>
+    <a href="{{ post.url | relative_url }}">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y. %m. %d.' }}</time>
+      <h2>{{ post.title }}</h2>
+      {%- if post.description %}<p>{{ post.description }}</p>{% endif -%}
+    </a>
+  </li>
+  {%- endfor %}
+</ul>
+{%- else %}
+<p class="empty">아직 글이 없습니다.</p>
+{%- endif %}

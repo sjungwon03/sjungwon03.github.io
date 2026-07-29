@@ -1,13 +1,20 @@
+{%- assign ko = false -%}
+{%- if page.lang == 'ko' %}{% assign ko = true %}{% endif -%}
+
 <footer class="site-footer">
   <div class="footer-inner">
-    <p class="footer-name">{{ site.title }}</p>
+    <p class="footer-name">{% if ko %}{{ site.title_ko }}{% else %}{{ site.title }}{% endif %}</p>
     <p class="footer-links">
       <a href="mailto:{{ site.email }}">{{ site.email }}</a>
       <span aria-hidden="true">·</span>
       <a href="https://github.com/{{ site.github_username }}" rel="me noopener">github.com/{{ site.github_username }}</a>
       <span aria-hidden="true">·</span>
       <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      {%- if page.alt_url %}
+      <span aria-hidden="true">·</span>
+      <a href="{{ page.alt_url | relative_url }}" lang="{% if ko %}en{% else %}ko{% endif %}">{% if ko %}English{% else %}한국어{% endif %}</a>
+      {%- endif -%}
     </p>
-    <p class="footer-meta">© {{ site.time | date: '%Y' }} {{ site.title }}</p>
+    <p class="footer-meta">© {{ site.time | date: '%Y' }} {% if ko %}{{ site.title_ko }}{% else %}{{ site.title }}{% endif %}</p>
   </div>
 </footer>

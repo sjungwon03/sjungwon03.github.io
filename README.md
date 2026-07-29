@@ -1,45 +1,70 @@
 # sjungwon03.github.io
 
-개인 사이트. GitHub Pages(Jekyll)로 빌드·배포됩니다.
+Personal site. Built and deployed by GitHub Pages (Jekyll).
+English is the default; Korean lives under `/ko/`.
 
-## 구조
+## Layout
 
 ```
-_config.yml        사이트 설정
+_config.yml        site settings (en + ko strings)
 _layouts/          default · page · post
 _includes/         head · header · footer
-_posts/            글 (YYYY-MM-DD-제목.md)
-assets/css/        스타일
-index.html         글 목록
-resume.md          이력
-about.md           소개
-feed.xml           Atom 피드
+_posts/            posts — lang: en | ko
+assets/css/        styles
+index.html         English home        →  /
+resume.md          English résumé      →  /resume/
+about.md           English about       →  /about/
+ko/index.html      Korean home         →  /ko/
+ko/resume.md       Korean résumé       →  /ko/resume/
+ko/about.md        Korean about        →  /ko/about/
+feed.xml           Atom feed
 ```
 
-## 글 쓰기
+## Language pairing
 
-`_posts/`에 `YYYY-MM-DD-슬러그.md` 형식으로 파일을 만듭니다.
+Every page carries `lang` and `alt_url` in its front matter.
+`alt_url` points at the same page in the other language and drives both the
+header toggle and the `hreflang` tags. Omit it and the toggle simply doesn't render.
+
+```yaml
+lang: en
+alt_url: /ko/resume/
+```
+
+## Writing a post
+
+Create `_posts/YYYY-MM-DD-slug.md`.
 
 ```markdown
 ---
-title: 글 제목
-description: 목록과 검색에 노출되는 한 줄 요약
-tags: [백엔드, 인프라]
+title: Post title
+description: One line, shown in the list and in search results
+tags: [backend, infrastructure]
+lang: en
+alt_url: /ko/posts/2026/07/30/slug/   # only if a translation exists
 ---
 
-본문.
+Body.
 ```
 
-`main`에 push하면 GitHub Pages가 자동으로 빌드합니다.
+Korean posts need an explicit `permalink` under `/ko/posts/...`, since the
+default permalink pattern is language-agnostic.
 
-## 로컬 확인
+Push to `main` and GitHub Pages rebuilds.
+
+## Local preview
 
 ```bash
 bundle install
 bundle exec jekyll serve
 ```
 
-## 이력 페이지
+## Analytics
 
-`resume.md`는 별도 관리하는 이력서 원본에서 옮겨온 내용입니다.
-공개 사이트라 자격증 등록번호와 병역 상세는 제외했습니다.
+Self-hosted Rybbit, loaded from `_includes/head.html`.
+
+## Note on the résumé pages
+
+`resume.md` and `ko/resume.md` are derived from a separately maintained résumé.
+Because the site is public, certification registration numbers and detailed
+military service records are left out.

@@ -2,6 +2,9 @@
 title: 배포가 데이터를 훼손하지 않게
 description: 배포할 때마다 수강생의 진도가 사라지던 문제를, 기능이 아니라 정합성 요건으로 다룬 기록.
 tags: [백엔드, 인프라, 무중단배포]
+lang: ko
+permalink: /ko/posts/2026/07/30/deploys-that-do-not-corrupt-data/
+alt_url: /posts/2026/07/30/deploys-that-do-not-corrupt-data/
 ---
 
 정부지원 직업훈련 LMS를 담당하던 시절, 배포할 때마다 강의를 시청 중이던 수강생의 연결이 끊기고 그 시점의 진도가 유실됐습니다.

@@ -1,17 +1,32 @@
+{%- assign ko = false -%}
+{%- if page.lang == 'ko' %}{% assign ko = true %}{% endif -%}
+{%- if ko %}{% assign home = '/ko/' %}{% else %}{% assign home = '/' %}{% endif -%}
+{%- if ko %}{% assign base = '/ko' %}{% else %}{% assign base = '' %}{% endif -%}
+
 <header class="site-header">
-  <a class="brand" href="{{ '/' | relative_url }}">
+  <a class="brand" href="{{ home | relative_url }}">
     <span class="brand-mark" aria-hidden="true">◼</span>
     <span class="brand-text">
-      <strong>{{ site.title }}</strong>
-      <em>{{ site.tagline }}</em>
+      <strong>{% if ko %}{{ site.title_ko }}{% else %}{{ site.title }}{% endif %}</strong>
+      <em>{% if ko %}{{ site.tagline_ko }}{% else %}{{ site.tagline }}{% endif %}</em>
     </span>
   </a>
 
-  <nav class="site-nav" aria-label="주요 메뉴">
-    {%- assign p = page.url -%}
-    <a href="{{ '/' | relative_url }}"{% if p == '/' %} aria-current="page"{% endif %}>글</a>
-    <a href="{{ '/resume/' | relative_url }}"{% if p contains '/resume' %} aria-current="page"{% endif %}>이력</a>
-    <a href="{{ '/about/' | relative_url }}"{% if p contains '/about' %} aria-current="page"{% endif %}>소개</a>
-    <a href="https://github.com/{{ site.github_username }}" rel="me noopener">GitHub</a>
-  </nav>
+  <div class="header-right">
+    <nav class="site-nav" aria-label="{% if ko %}주요 메뉴{% else %}Main{% endif %}">
+      {%- assign p = page.url -%}
+      <a href="{{ home | relative_url }}"{% if p == home %} aria-current="page"{% endif %}>{% if ko %}글{% else %}Writing{% endif %}</a>
+      <a href="{{ base | append: '/resume/' | relative_url }}"{% if p contains '/resume' %} aria-current="page"{% endif %}>{% if ko %}이력{% else %}Résumé{% endif %}</a>
+      <a href="{{ base | append: '/about/' | relative_url }}"{% if p contains '/about' %} aria-current="page"{% endif %}>{% if ko %}소개{% else %}About{% endif %}</a>
+      <a href="https://github.com/{{ site.github_username }}" rel="me noopener">GitHub</a>
+    </nav>
+
+    {%- if page.alt_url %}
+    <a class="lang-toggle" href="{{ page.alt_url | relative_url }}"
+       lang="{% if ko %}en{% else %}ko{% endif %}"
+       aria-label="{% if ko %}Switch to English{% else %}한국어로 보기{% endif %}">
+      {% if ko %}EN{% else %}KO{% endif %}
+    </a>
+    {%- endif -%}
+  </div>
 </header>
