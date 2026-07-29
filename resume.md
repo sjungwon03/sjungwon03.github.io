@@ -16,7 +16,7 @@ Four groups, by affiliation: services I owned during full-time employment, two t
 | **Smart Dong School** (employment) | 2023.09 – 2025.11 | 11 PHP sites · Naeildong School · Kizdong · Dokhakdong · Edudong · Blogdong · Dotetimer · infrastructure as code | Backend owner (full-stack) · deployment & ops |
 | **SeSAC** (training) | 2026.06 – 2026.07 | YouthPick — youth policy recommendation platform (team of 5) | Team lead, full-stack |
 | **Side** | 2026.02 – present | Maiary · Curora — two mobile apps | Solo — from concept to operations |
-| **KOSA** (training) | 2026.05 – 2026.06 | Final project — Proxmox + AWS hybrid infrastructure (team of 5) | Infrastructure lead · architecture |
+| **KOSA** (training) | 2026.04 – 2026.05 | Final project — Proxmox + AWS hybrid infrastructure (team of 5) | Infrastructure lead · architecture |
 
 ---
 
@@ -156,7 +156,7 @@ Two mobile apps taken from concept to release and operation alone. Most of the w
 
 ## 4. KOSA (training) — final project
 
-**2026.05 – 2026.06** · KOSA cloud infrastructure engineering · team GARDEN, 5 people · infrastructure lead
+**2026.04 – 2026.05** · KOSA Cloud Infrastructure Engineer Program · team GARDEN, 5 people · infrastructure lead
 `Proxmox VE · Kubernetes · Terraform · Ansible · Packer · AWS`
 
 A hybrid environment: 25 VMs and a Kubernetes HA cluster (7 nodes, 106 pods) on a four-node Proxmox cluster, connected to AWS over VPN.
@@ -206,7 +206,7 @@ Wrote the design documentation myself, recording the reasoning behind each choic
 | Period | Program |
 | --- | --- |
 | 2026.06 – present | **SeSAC** — team lead, first project (YouthPick) |
-| 2026.05 – 2026.06 | **KOSA Cloud Infrastructure Engineering** — infrastructure lead, final project |
+| 2026.03 – 2026.05 | **KOSA Cloud Infrastructure Engineer Program** — completed · infrastructure lead, final project |
 
 ---
 
