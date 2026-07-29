@@ -8,11 +8,6 @@ permalink: /ko/resume/
 alt_url: /resume/
 ---
 
-<div class="resume-actions">
-  <a class="btn primary" href="mailto:sjungwon03@gmail.com">이메일로 연락</a>
-  <a class="btn" href="https://github.com/sjungwon03" rel="noopener">GitHub</a>
-</div>
-
 ## 개요
 
 소속 기준으로 네 갈래입니다. 재직 기간에 담당한 회사 서비스, 퇴사 후 교육 과정에서 진행한 팀 프로젝트 두 건, 그리고 1인 개발로 출시해 운영 중인 앱입니다.

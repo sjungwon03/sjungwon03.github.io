@@ -4,13 +4,8 @@ title: Résumé
 lang: en
 alt_url: /ko/resume/
 lede: Organised by where the work happened. Each entry covers what I built and what I weighed while building it.
-description: Jungwon Son — backend and cloud infrastructure. Smart Dong School · SeSAC · side projects · KOSA.
+description: Jungwon Sohn — backend and cloud infrastructure. Smart Dong School · SeSAC · side projects · KOSA.
 ---
-
-<div class="resume-actions">
-  <a class="btn primary" href="mailto:sjungwon03@gmail.com">Email me</a>
-  <a class="btn" href="https://github.com/sjungwon03" rel="noopener">GitHub</a>
-</div>
 
 ## Overview
 

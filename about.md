@@ -3,30 +3,33 @@ layout: page
 title: About
 lang: en
 alt_url: /ko/about/
-lede: I work on backend systems and cloud infrastructure.
-description: Jungwon Son — backend and cloud infrastructure engineer. 2 years 3 months of experience.
+lede: Cloud Infrastructure & Backend Engineer.
+description: Jungwon Sohn — Cloud Infrastructure & Backend Engineer. Building MCP servers, AI agents, developer tools and cloud-native services.
 ---
 
-For two years and three months I owned the backend of a government-funded vocational training LMS. In that domain, course progress is the basis for tuition reimbursement and instructor settlement figures are the basis for actual payroll. That shaped a habit: before asking whether a feature works, ask whether the numbers are right.
+I spent two years and three months owning the backend of a government-funded vocational training LMS. Course progress was the basis for tuition reimbursement, so the habit I took from it is simple: check that the numbers are right before checking that the feature works.
 
-I handled deployment and operations alongside development. I watched learners lose their viewing progress every time we shipped, so I treat zero-downtime deployment as a data-integrity requirement rather than a nice-to-have.
+I handled deployment and operations alongside development, and moved into infrastructure from there. Watching learners lose their progress on every deploy is why I treat zero-downtime deployment as a data-integrity requirement rather than a feature.
 
-## How I work
+These days I build in the open — MCP servers, AI agents, developer tools and cloud-native services.
 
-- **I assume a full rewrite is off the table.** Most of the services I touched were already running and already earning. So half the job was deciding where to cut first. I lean on the same sequence repeatedly: pin down the pattern in a rehearsal environment, then apply it to production in one pass.
-- **I roll things back when the premise turns out to be wrong.** I introduced refresh-token rotation, then found it only holds if there are no concurrent requests — two browser tabs break it — and removed it. In a side project I cut the server-side crawler after concluding that a scheduled collector is the most expensive part to run alone.
-- **I write down the reasoning and the alternatives I rejected.** Including the steps I failed to automate, in order. The point is that whoever comes next doesn't fall into the same hole.
-- **I put tests where failure is silent.** Bugs that throw get found anyway. What's dangerous is a value that quietly goes wrong — an enum and an external code table drifting apart until a recommendation score silently reads zero.
+## Open source
 
-## Now
+- [Theorvane](https://github.com/Theorvane) — developer tools for typed contracts and AI-native systems
+- [Youth Policy MCP](https://github.com/sjungwon03/data-go-youth-policy-mcp) — Korea's public youth-policy API exposed as MCP tools
+- [Youth Policy Chatbot](https://github.com/sjungwon03/data-go-youth-policy-chatbot) — an MCP-based policy assistant
+- [YouthPick](https://github.com/YouthPick) — personalised youth-policy platform
+- [KOSA Final Project](https://github.com/sjungwon03/kosa-final-project) — hybrid Proxmox and AWS infrastructure automation
 
-After leaving, I earned the AWS Solutions Architect – Associate and HashiCorp Terraform Associate certifications and completed a cloud infrastructure engineering program. As infrastructure lead on the final project, I designed and built a hybrid environment connecting an on-premise Kubernetes cluster across four physical servers to AWS.
+## Certifications
 
-I also ship and operate two mobile apps as a solo developer — planning, server-side purchase verification, store releases, all of it. Doing every part alone keeps testing the same question: what shape of system can one person actually carry?
-
-More detail is on the [résumé]({{ '/resume/' | relative_url }}) page.
+- [AWS Certified Solutions Architect – Associate](https://www.credly.com/badges/6bc4a7c1-e9b5-4a2d-b484-10fc2ced198e/public_url)
+- [HashiCorp Certified: Terraform Associate](https://www.credly.com/badges/c3392494-6836-4ab7-9376-698b420c522a/public_url)
+- Engineer Information Processing · SQL Developer (SQLD)
 
 ## Contact
 
 - Email — [sjungwon03@gmail.com](mailto:sjungwon03@gmail.com)
 - GitHub — [github.com/sjungwon03](https://github.com/sjungwon03)
+
+Full detail is on the [résumé]({{ '/resume/' | relative_url }}) page.
