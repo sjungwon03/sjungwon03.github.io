@@ -197,7 +197,7 @@ Wrote the design documentation myself, recording the reasoning behind each choic
 
 | Period | |
 | --- | --- |
-| 2017.03 – 2026.08 | **Sejong University** — Computer Engineering (expected graduation) |
+| 2017.03 – 2026.08 | **Sejong University** — Computer Engineering, graduated |
 
 ---
 
