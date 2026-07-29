@@ -88,7 +88,7 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
-.brand { display: flex; align-items: baseline; gap: 0.6rem; }
+.brand { display: flex; align-items: center; gap: 0.65rem; }
 .brand-mark { font-size: 0.7rem; color: var(--faint); }
 .brand-text { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
 .brand-text strong { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; }
@@ -111,6 +111,28 @@ button:focus-visible {
   color: var(--ink);
   font-weight: 600;
   border-bottom-color: var(--ink);
+}
+
+/* ── 아바타 (GitHub 프로필을 그대로 참조) ── */
+
+.brand-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--fill);
+  object-fit: cover;
+  flex: none;
+  align-self: center;
+}
+
+.page-head.with-avatar { display: flex; flex-direction: column; align-items: flex-start; }
+.page-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--fill);
+  object-fit: cover;
+  margin-bottom: 1.1rem;
 }
 
 /* ── 언어 전환 ────────────────────────────── */

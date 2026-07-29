@@ -4,6 +4,7 @@ title: 소개
 lang: ko
 permalink: /ko/about/
 alt_url: /about/
+avatar: true
 lede: 클라우드 인프라 · 백엔드 엔지니어. MCP 서버, AI 에이전트, 개발자 도구, 클라우드 네이티브 서비스를 오픈소스로 만듭니다.
 description: 손정원 — 클라우드 인프라 · 백엔드 엔지니어. Theorvane에서 TypeMCP · TypeChain · OpenVideo를 만듭니다.
 ---

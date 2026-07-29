@@ -2,7 +2,10 @@
 layout: default
 ---
 <article class="page">
-  <header class="page-head">
+  <header class="page-head{% if page.avatar %} with-avatar{% endif %}">
+    {%- if page.avatar %}
+    <img class="page-avatar" src="{{ site.avatar }}?size=200" alt="{{ site.author }}" width="100" height="100" loading="eager" decoding="async">
+    {%- endif %}
     <h1>{{ page.title }}</h1>
     {%- if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif -%}
   </header>

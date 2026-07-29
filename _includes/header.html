@@ -5,7 +5,7 @@
 
 <header class="site-header">
   <a class="brand" href="{{ home | relative_url }}">
-    <span class="brand-mark" aria-hidden="true">◼</span>
+    <img class="brand-avatar" src="{{ site.avatar }}?size=72" alt="" width="36" height="36" loading="eager" decoding="async">
     <span class="brand-text">
       <strong>{% if ko %}{{ site.title_ko }}{% else %}{{ site.title }}{% endif %}</strong>
       <em>{% if ko %}{{ site.tagline_ko }}{% else %}{{ site.tagline }}{% endif %}</em>

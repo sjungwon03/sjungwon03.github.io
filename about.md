@@ -3,6 +3,7 @@ layout: page
 title: About
 lang: en
 alt_url: /ko/about/
+avatar: true
 lede: Cloud Infrastructure & Backend Engineer. OSS enthusiast building MCP servers, AI agents, developer tools and cloud-native services.
 description: Jungwon Sohn — Cloud Infrastructure & Backend Engineer. Building TypeMCP, TypeChain and OpenVideo under Theorvane.
 ---
