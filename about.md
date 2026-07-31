@@ -5,7 +5,7 @@ lang: en
 alt_url: /ko/about/
 avatar: true
 lede: Cloud Infrastructure & Backend Engineer. OSS enthusiast building MCP servers, AI agents, developer tools and cloud-native services.
-description: Jungwon Sohn — Cloud Infrastructure & Backend Engineer. Building TypeMCP, TypeChain and OpenVideo under Theorvane.
+description: Jungwon Sohn — Cloud Infrastructure & Backend Engineer. Building TypeMCP, TypeChain and OpenScene under Theorvane.
 ---
 
 Cloud infrastructure and backend engineer, and an OSS enthusiast — most of what I build now is open source: MCP servers, AI agents, developer tools and cloud-native services.
@@ -18,7 +18,7 @@ I build under [**Theorvane**](https://theorvane.tech) — open-source developer 
 | --- | --- |
 | [**TypeMCP**](https://github.com/Theorvane/type-mcp)<br>[`@theorvane/type-mcp`](https://www.npmjs.com/package/@theorvane/type-mcp) | Decorator-first TypeScript declarations and runtime tooling for Model Context Protocol servers. Definition validation, MCP SDK compilation, stdio and Streamable HTTP transports, and a tools-only LangChain adapter. |
 | [**TypeChain**](https://github.com/Theorvane/type-chain)<br>[`@theorvane/type-chain`](https://www.npmjs.com/package/@theorvane/type-chain) | A decorator-first, type-safe authoring layer for LangChain JS tools and agents. `@Tool()` / `@Agent()` / `@Policy()` decorators, LangChain Core adapters, and an in-process TypeMCP bridge. Published through GitHub Actions Trusted Publishing. |
-| [**OpenVideo**](https://github.com/Theorvane/openvideo) | A local-first desktop video editor with an AI agent that operates the timeline: reading a project, cutting clips, generating voice and video, exporting through local FFmpeg. Media stays on the machine and model providers are opt-in — a local Ollama engine needs no account. |
+| [**OpenScene**](https://github.com/Theorvane/openscene) | A local-first desktop video editor with an AI agent that operates the timeline: reading a project, cutting clips, generating voice and video, exporting through local FFmpeg. Media stays on the machine and model providers are opt-in — a local Ollama engine needs no account. |
 | [**type-mcp-api-agent-skill**](https://github.com/Theorvane/type-mcp-api-agent-skill) | An orchestration skill and deterministic CLI workspace that turns API specifications into TypeMCP repositories. |
 | [**examples**](https://github.com/Theorvane/examples) | Runnable TypeChain and TypeMCP examples with explicit runtime boundaries. |
 
